@@ -1,834 +1,95 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "entry": {
-      "type": "object",
-      "properties": {
-        "configurationInfos": {
-          "type": "array",
-          "items": {}
-        },
-        "displayOrder": {
-          "type": "integer"
-        },
-        "entryNumber": {
-          "type": "integer"
-        },
-        "product": {
-          "type": "object",
-          "properties": {
-            "availableForPickup": {
-              "type": "boolean"
+  "entry":{
+    "configurationInfos":[
+
+    ],
+    "displayOrder":0,
+    "entryNumber":0,
+    "product":{
+      "availableForPickup":false,
+      "baseOptions":[
+        {
+          "selected":{
+            "code":"5401677",
+            "priceData":{
+              "currencyIso":"EUR",
+              "value":18.99
             },
-            "baseOptions": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "selected": {
-                      "type": "object",
-                      "properties": {
-                        "code": {
-                          "type": "string"
-                        },
-                        "priceData": {
-                          "type": "object",
-                          "properties": {
-                            "currencyIso": {
-                              "type": "string"
-                            },
-                            "value": {
-                              "type": "number"
-                            }
-                          },
-                          "required": [
-                            "currencyIso",
-                            "value"
-                          ]
-                        },
-                        "stock": {
-                          "type": "object",
-                          "properties": {
-                            "stockLevel": {
-                              "type": "integer"
-                            }
-                          },
-                          "required": [
-                            "stockLevel"
-                          ]
-                        },
-                        "url": {
-                          "type": "string"
-                        },
-                        "variantOptionQualifiers": {
-                          "type": "array",
-                          "items": {}
-                        }
-                      },
-                      "required": [
-                        "code",
-                        "priceData",
-                        "stock",
-                        "url",
-                        "variantOptionQualifiers"
-                      ]
-                    },
-                    "variantType": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "selected",
-                    "variantType"
-                  ]
-                }
-              ]
+            "stock":{
+              "stockLevel":684
             },
-            "baseProduct": {
-              "type": "string"
-            },
-            "categories": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "name"
-                  ]
-                }
-              ]
-            },
-            "code": {
-              "type": "string"
-            },
-            "configurable": {
-              "type": "boolean"
-            },
-            "homeDeliveryOnly": {
-              "type": "boolean"
-            },
-            "isLoyaltyProduct": {
-              "type": "boolean"
-            },
-            "maxOrderQuantity": {
-              "type": "integer"
-            },
-            "name": {
-              "type": "string"
-            },
-            "pharmacy": {
-              "type": "boolean"
-            },
-            "price": {
-              "type": "object",
-              "properties": {
-                "currencyIso": {
-                  "type": "string"
-                },
-                "formattedValue": {
-                  "type": "string"
-                },
-                "oldValueLabel": {
-                  "type": "string"
-                },
-                "priceType": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "currencyIso",
-                "formattedValue",
-                "oldValueLabel",
-                "priceType",
-                "value"
-              ]
-            },
-            "productLoyaltyPoints": {
-              "type": "integer"
-            },
-            "purchasable": {
-              "type": "boolean"
-            },
-            "stock": {
-              "type": "object",
-              "properties": {
-                "stockLevel": {
-                  "type": "integer"
-                },
-                "stockLevelStatus": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "stockLevel",
-                "stockLevelStatus"
-              ]
-            },
-            "url": {
-              "type": "string"
-            }
+            "url":"/robijn-klein-krachtig-color-wasmiddel-jaarbox/p/5401677",
+            "variantOptionQualifiers":[
+
+            ]
           },
-          "required": [
-            "availableForPickup",
-            "baseOptions",
-            "baseProduct",
-            "categories",
-            "code",
-            "configurable",
-            "homeDeliveryOnly",
-            "isLoyaltyProduct",
-            "maxOrderQuantity",
-            "name",
-            "pharmacy",
-            "price",
-            "productLoyaltyPoints",
-            "purchasable",
-            "stock",
-            "url"
-          ]
-        },
-        "quantity": {
-          "type": "integer"
-        },
-        "redeemLoyaltyPoints": {
-          "type": "integer"
-        },
-        "redeemLoyaltyPointsForProduct": {
-          "type": "integer"
-        },
-        "rewardLoyaltyPoints": {
-          "type": "integer"
-        },
-        "totalPrice": {
-          "type": "object",
-          "properties": {
-            "currencyIso": {
-              "type": "string"
-            },
-            "value": {
-              "type": "number"
-            }
-          },
-          "required": [
-            "currencyIso",
-            "value"
-          ]
+          "variantType":"VariantProduct"
         }
+      ],
+      "baseProduct":"BP_5401677",
+      "categories":[
+        {
+          "code":"promo_1002897",
+          "name":"20% op 2 artikelen Reactivatieprogramma"
+        },
+        {
+          "code":"promo_1007439",
+          "name":"Cash 4 Points 2,50 korting tiv 450 punten langlopend"
+        },
+        {
+          "code":"multipakken-huis-en-schoonmaak",
+          "name":"Multipakken Huis en Schoonmaak"
+        },
+        {
+          "code":"promo_1021802"
+        },
+        {
+          "code":"promo_1021803"
+        },
+        {
+          "code":"promo_1021804"
+        },
+        {
+          "code":"promo_1021820"
+        },
+        {
+          "code":"promo_1021819"
+        }
+      ],
+      "code":"5401677",
+      "configurable":false,
+      "homeDeliveryOnly":false,
+      "isLoyaltyProduct":false,
+      "maxOrderQuantity":15,
+      "name":"Robijn Klein & Krachtig Color Wasmiddel Jaarbox",
+      "pharmacy":false,
+      "price":{
+        "currencyIso":"EUR",
+        "formattedOldValue":"€ 50,94",
+        "formattedValue":"€ 18,99",
+        "oldValue":50.94,
+        "oldValueLabel":"product.pricetag.from.suggested.manufacturer",
+        "priceType":"BUY",
+        "value":18.99
       },
-      "required": [
-        "configurationInfos",
-        "displayOrder",
-        "entryNumber",
-        "product",
-        "quantity",
-        "redeemLoyaltyPoints",
-        "redeemLoyaltyPointsForProduct",
-        "rewardLoyaltyPoints",
-        "totalPrice"
-      ]
+      "productLoyaltyPoints":0,
+      "purchasable":true,
+      "stock":{
+        "stockLevel":684,
+        "stockLevelStatus":"inStock"
+      },
+      "url":"/robijn-klein-krachtig-color-wasmiddel-jaarbox/p/5401677"
     },
-    "quantity": {
-      "type": "integer"
-    },
-    "quantityAdded": {
-      "type": "integer"
-    },
-    "statusCode": {
-      "type": "string"
+    "quantity":2,
+    "redeemLoyaltyPoints":0,
+    "redeemLoyaltyPointsForProduct":0,
+    "rewardLoyaltyPoints":0,
+    "totalPrice":{
+      "currencyIso":"EUR",
+      "value":37.98
     }
   },
-  "required": [
-    "entry",
-    "quantity",
-    "quantityAdded",
-    "statusCode"
-  ]
+  "quantity":2,
+  "quantityAdded":1,
+  "statusCode":"success"
 }

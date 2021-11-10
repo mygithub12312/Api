@@ -8,21 +8,21 @@ import org.openqa.selenium.*;
 public class Cart {
 
 	final String cartUrl = "https://www.kruidvat.nl/cart";
-	final By product = By.xpath("//a[@class='product-summary__img-link']");
+	final By productName = By.xpath("//a[@class='product-summary__img-link']");
 
 	public WebElement findElement(By by) {
 		return getDriver().findElement(by);
 	}
 
-	public WebElement getProductLink() {
-		return findElement(product);
+	public WebElement getProductName() {
+		return findElement(productName);
 	}
 
-	public void openCartOnUiWithCookie(String cartId) {
-		Cookie cartCookie = new Cookie("kvn-cart", cartId);
+	public void openSite(String cartId) {
+		Cookie cookie = new Cookie("kvn-cart", cartId);
 		getDriver().get(cartUrl);
 		getDriver().manage().deleteAllCookies();
-		getDriver().manage().addCookie(cartCookie);
+		getDriver().manage().addCookie(cookie);
 		getDriver().navigate().refresh();
 	}
 
