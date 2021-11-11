@@ -22,8 +22,7 @@ public class ApiTest {
 	@Test
 	public void addProductToTheShoppingCartApiTest() {
 
-		Response createNewCart =
-				given()
+		Response createNewCart = given()
 						.contentType("application/json")
 						.accept("application/json")
 						.when()
