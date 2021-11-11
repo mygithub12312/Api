@@ -49,6 +49,6 @@ public class ApiTest {
 		cartUi.openSite(cart);
 
 		assertThat(cartUi.getProductName().getAttribute("href").contains(product))
-				.overridingErrorMessage("Product is not added to Shopping Cart");
+				.overridingErrorMessage("Empty Shopping Cart");
 	}
 }
