@@ -19,23 +19,19 @@ public class ApiTest {
 	final Cart cartUi = new Cart();
 	CartPostUrl cartPostUrl = new CartPostUrl();
 
-	final String product = "5401677";
-	final String contentType = "application/json";
-	final int productQty = 1;
-
 	@Test
 	public void addProductToTheShoppingCartApiTest() {
 
 		Response createNewCart =
 				given()
-						.contentType(contentType)
-						.accept(contentType)
+						.contentType("application/json")
+						.accept("application/json")
 						.when()
 						.post(cartPostUrl.createCart()).then().extract().response();
 		String cart = createNewCart.jsonPath().getString("guid");
 		String request = BasePayload.getTemplatePayload("src/main/resources/addToCartPayload.txt",
 				Map.mapOf("code", "5401677", "quantity", "1"));
-		given().header("Content-Type", contentType).body(request).post(
+		given().header("Content-Type", "application/json").body(request).post(
 				cartPostUrl.createCustomerCurt(cart))
 				.then()
 				.log()
@@ -45,10 +41,10 @@ public class ApiTest {
 				.and()
 				.contentType(
 				ContentType.JSON).body(matchesJsonSchemaInClasspath("schemaCartResponse.json")).body("entry.product.code",
-				equalTo(product)).body("quantity", equalTo(productQty));
+				equalTo("5401677")).body("quantity", equalTo(1));
 		cartUi.openSite(cart);
 
-		assertThat(cartUi.getProductName().getAttribute("href").contains(product))
+		assertThat(cartUi.getProductName().getAttribute("href").contains("5401677"))
 				.overridingErrorMessage("Empty Shopping Cart");
 	}
 }
